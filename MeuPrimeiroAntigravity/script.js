@@ -341,22 +341,9 @@ function setupSpatialInteractions() {
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
 
-            // Variáveis CSS para o Spotlight de Luz
+            // Variáveis CSS para o Spotlight de Luz sutil
             card.style.setProperty('--mouse-x', `${x}px`);
             card.style.setProperty('--mouse-y', `${y}px`);
-
-            // Rotação 3D suave com perspectiva
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * -3; // Max 3 graus
-            const rotateY = ((x - centerX) / centerX) * 3;
-
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            // Retorno à posição de repouso
-            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
         });
     });
 }

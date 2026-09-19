@@ -357,12 +357,11 @@ body {
 
 .settings-trigger-btn:hover {
     border-color: var(--border-specular);
-    transform: translateY(-1px);
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
 .settings-trigger-btn:active {
-    transform: scale(0.96);
+    opacity: 0.85;
 }
 
 /* ==========================================================================
@@ -372,7 +371,6 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--space-lg);
-    perspective: 1200px;
 }
 
 /* Card Base Bento Box */
@@ -385,8 +383,7 @@ body {
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
     overflow: hidden;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s var(--ease-out);
-    transform-style: preserve-3d;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bento-card:hover {
@@ -570,12 +567,12 @@ body {
 }
 
 .btn-primary-action:hover {
-    transform: translateY(-1px) scale(1.02);
     box-shadow: 0 6px 20px var(--accent-glow);
+    filter: brightness(1.08);
 }
 
 .btn-primary-action:active {
-    transform: scale(0.97);
+    opacity: 0.9;
 }
 
 .btn-icon {
@@ -628,7 +625,6 @@ body {
 
 .task-item:hover {
     border-color: var(--border-specular);
-    transform: translateY(-1.5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -718,7 +714,7 @@ body {
 }
 
 .btn-delete-spatial:active {
-    transform: scale(0.92);
+    opacity: 0.75;
 }
 
 /* Estado Vazio */
